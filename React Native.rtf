@@ -1,0 +1,50 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1404\cocoasubrtf470
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 import React, \{Component\} from 'react';\
+import \{ \
+  StyleSheet, \
+  Text, \
+  View, \
+  Button,\
+  StatusBar,\
+\} from 'react-native';\
+\
+import Login from './login';\
+\
+export default class Main extends Component\{\
+  static navigationOptions = \{\
+    title: 'Index Page',\
+  \};\
+    \
+  render()\{\
+    const \{navigate\} =this.props.navigation;\
+    return(\
+      <View style=\{\{flex:1, alignItems:'center', justifyContent:'space-around'\}\}>\
+	/* Status Bar lets developer have complete manipulation of the top bar or notification bar*/\
+        <StatusBar \
+        backgroundColor="#c0c0c0"\
+        barStyle='dark-content'/> \
+        <Button\
+          onPress=\{() => navigate('Login')\}\
+          title="Page 1"/>\
+        <Button\
+        onPress=\{() => navigate('Login')\}\
+        title="Page 2"/>\
+        <Button\
+        onPress=\{() => navigate('Login')\}\
+        title="Page 3"/>\
+        <Button\
+        onPress=\{() => navigate('Login')\}\
+        title="Page 4"/>\
+\
+      </View>\
+    )\
+  \}\
+\}\
+\
+\
+}
